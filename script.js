@@ -23,9 +23,10 @@ const fontSize = getCookie("fontsize");
 const fontColor = getCookie("fontcolor");
 
 if (fontSize) {
-	 document.body.style.fontSize = fontSize + 'px';
+    document.documentElement.style.setProperty("--fontsize", fontSize + "px");
 }
 
 if (fontColor) {
-    document.body.style.color = fontColor;
+    document.documentElement.style.setProperty("--fontcolor", fontColor);
+}
 }
